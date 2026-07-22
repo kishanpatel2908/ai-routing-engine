@@ -1,0 +1,10 @@
+# Environments
+venv/
+.env
+
+# Database Volume
+db_data/
+
+# Python Cache
+__pycache__/
+*.pyc

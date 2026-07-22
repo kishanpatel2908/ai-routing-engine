@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+osmnx
+networkx
+scikit-image
+SQLAlchemy
+geoalchemy2
+psycopg2-binary

@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgis/postgis:latest
+    container_name: local_routing_db
+    restart: always
+    environment:
+      POSTGRES_USER: kishan
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: local_routing_db
+    ports:
+      - "5432:5432"
+    volumes:
