@@ -10,3 +10,16 @@ services:
     ports:
       - "5432:5432"
     volumes:
+      - ./db_data:/var/lib/postgresql/data
+
+  api:
+    build: .
+    container_name: local_routing_api
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      # Use the Docker service name 'db' instead of 'localhost'
+      - DATABASE_URL=postgresql+psycopg2://kishan:password@db:5432/local_routing_db
+    depends_on:
+      - db
